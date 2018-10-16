@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <img src="logo.png" />
+    <div id="registerForm">
+      <label for="registerForm" class="titleLabel">Register Form</label>
+      <form name="registerForm">
+        <input type="text" name="usernameR" placeholder="Username" /><br>
+        <input type="password" name="password" placeholder="Password"/><br>
+        <input type="password" name="confPassword" placeholder="Confirm Password"/><br>
+        <input type="text" name="email" placeholder="Email"/><br>
+        <input type="text" name="location" placeholder="Location"/><br>
+        <input type="checkbox" name="agreement" value=""/>
+        <label for="agreement">I have read and accept the terms of use.</label><br>
+        <button type="submit" id="signUpButton">Sign up</button>
+      </form>
+    </div>
+
+    <div id="wholeForm">
+      <label for="signInForm" class="titleLabel">Sign In Form</label>
+      <form name="signInForm" id="signInForm">
+        <input type="text" name="usernameS" placeholder="Username" /><br>
+        <input type="password" name="passwordS" placeholder="Password"/><br>
+        <input type="checkbox" name="rememberS" value=""/>
+        <label for="rememberS">Remember me</label>
+        <button type="submit" id="signInButton">Sign in</button>
+      </form>
+    </div>
+
+    <div id="wholeForm">
+      <label for="recoverForm" class="titleLabel">Recover Form</label>
+      <form name="recoverForm" id="recoverForm">
+        <input type="text" name="email" placeholder="Email"/><br>
+        <input type="text" name="phone" placeholder="Phone number"/><br>
+        <button type="submit" id="sendButton">Send</button>
+        <button type="submit" id="doneButton">Done</button>
+      </form>
+    </div>
+
+    <div id="wholeForm">
+      <label for="sendForm" class="titleLabel">Send Email</label>
+      <form name="sendForm" id="sendForm">
+        <input type="text" name="usernameSe" placeholder="Your Name" /><br>
+        <input type="text" name="emailSe" placeholder="Your Email"/><br>
+        <input type="text" name="messageSe" placeholder="Type your message here"/><br>
+        <input type="checkbox" name="forwardCheckboxSe" value=""/>
+        <label for="forwardCheckboxSe">Send a copy to my email.</label><br>
+        <button type="submit" id="sendEmailButtonSe">Send Email</button>
+      </form>
+    </div>
+
+    <div id="wholeForm">
+      <label for="subscribeForm" class="titleLabel">Subscribe Form</label>
+      <form name="subscribeForm" id="subscribeForm">
+        <input type="text" name="emailSu" placeholder="Email"/><br>
+        <button type="submit" id="subscribeButtonSu">Subscribe</button>
+        <button type="submit" id="noButtonSu">No, thanks</button>
+      </form>
+    </div>
+
+  </body>
+</html>

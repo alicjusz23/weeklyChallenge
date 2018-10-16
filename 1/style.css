@@ -1,0 +1,76 @@
+body {
+  background-image: url('tlo.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+div {
+  position: absolute;
+  width: 410pt;
+  text-align: center;
+}
+
+form {
+  background-color: #f4f4f4;
+  width: 390pt;
+  position: absolute;
+  border-radius: 5pt;
+}
+
+input {
+  margin-top: 10pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  width: 325pt;
+  height: 23pt;
+  border-radius: 5pt;
+}
+
+button {
+  height: 33pt;
+}
+
+.titleLabel {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  margin-bottom: 25pt;
+}
+
+img {
+  opacity: 0.5;
+  top: 130pt;
+  left: 325pt;
+  position: absolute;
+}
+
+#registerForm {
+  left: 95pt;
+  top: 245pt;
+  height: 445pt;
+}
+
+#signInForm{
+  left: 575pt;
+  top: 280pt;
+  height: 210pt;
+}
+
+#recoverForm{
+  left: 575pt;
+  top: 600pt;
+  height: 210pt;
+}
+
+#sendForm {
+  left: 95pt;
+  top: 800pt;
+  height: 500pt;
+}
+
+#subscribeForm {
+  left: 575pt;
+  top: 910pt;
+  height: 130pt;
+}
