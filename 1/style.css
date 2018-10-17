@@ -1,7 +1,13 @@
+@@font-face {
+  font-family: "Biotif Medium";
+  src: url("Biotif-Medium.ttf") format("truetype");
+}
+
 body {
   background-image: url('tlo.png');
   background-repeat: no-repeat;
   background-size: 100%;
+  font-family: Biotif Medium;
 }
 
 div {
@@ -12,9 +18,10 @@ div {
 
 form {
   background-color: #f4f4f4;
-  width: 390pt;
   position: absolute;
-  border-radius: 5pt;
+  border-radius: 3pt;
+  margin: 20pt;
+  width: 410pt;
 }
 
 input {
@@ -22,55 +29,75 @@ input {
   margin-left: 10pt;
   margin-right: 10pt;
   width: 325pt;
-  height: 23pt;
+  height: 35pt;
   border-radius: 5pt;
+}
+
+input[type=checkbox]:checked + label {
+    background: #26ca28;
 }
 
 button {
   height: 33pt;
+  background-color: #93d02b;
+  border-color: #3f9c03;
+  border-radius: 2pt;
+  color: white;
+  font-size: 12pt;
+  height: 45pt;
+  width: 140pt;
+  margin: 20pt;
 }
 
 .titleLabel {
-  font-size: x-large;
+  font-size: 25pt;
   font-weight: bold;
+  text-shadow: 2pt 2pt 2pt #000000;
   color: white;
   display: inline-block;
-  margin-bottom: 25pt;
+  margin-bottom: 20pt;
 }
 
 img {
   opacity: 0.5;
-  top: 130pt;
-  left: 325pt;
+  top: 55pt;
+  left: 345pt;
   position: absolute;
 }
 
 #registerForm {
-  left: 95pt;
-  top: 245pt;
+  left: 90pt;
+  top: 190pt;
   height: 445pt;
 }
 
 #signInForm{
-  left: 575pt;
-  top: 280pt;
+  left: 585pt;
+  top: 190pt;
   height: 210pt;
 }
 
 #recoverForm{
-  left: 575pt;
-  top: 600pt;
-  height: 210pt;
+  left: 585pt;
+  top: 530pt;
+  height: 255pt;
 }
 
 #sendForm {
-  left: 95pt;
-  top: 800pt;
-  height: 500pt;
+  left: 90pt;
+  top: 740pt;
+  height: 545pt;
 }
 
 #subscribeForm {
-  left: 575pt;
-  top: 910pt;
-  height: 130pt;
+  left: 585pt;
+  top: 875pt;
+  height: 175pt;
+}
+
+#internal {
+  width: 450pt;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2pt;
 }
