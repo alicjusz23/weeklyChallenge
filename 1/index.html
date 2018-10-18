@@ -4,39 +4,50 @@
   </head>
   <body>
     <img src="logo.png" />
+
     <div id="registerForm">
       <label for="registerForm" class="titleLabel">Register Form</label>
-      <form name="registerForm">
-        <input type="text" name="usernameR" placeholder="Username" /><br>
-        <input type="password" name="password" placeholder="Password"/><br>
-        <input type="password" name="confPassword" placeholder="Confirm Password"/><br>
-        <input type="text" name="email" placeholder="Email"/><br>
-        <input type="text" name="location" placeholder="Location"/><br>
-        <input type="checkbox" name="agreement" value=""/>
-        <label for="agreement">I have read and accept the terms of use.</label><br>
-        <button type="submit" id="signUpButton">Sign up</button>
-      </form>
+      <div id="internal">
+        <form name="registerForm">
+          <input type="text" name="usernameR" placeholder="Username" /><br>
+          <input type="password" name="password" placeholder="Password"/><br>
+          <input type="password" name="confPassword" placeholder="Confirm Password"/><br>
+          <input type="text" name="email" placeholder="Email"/><br>
+          <input type="text" name="location" placeholder="Location"/><br>
+          <div class="checkboxDiv">
+            <input type="checkbox" name="agreement" value="agreement"/>
+            <label class="checkboxLabel">I have read and accept the terms of use.</label><br>
+          </div>
+          <button type="submit" class="longButton" id="signUpButton">Sign up</button>
+        </form>
+      </div>
     </div>
 
     <div id="signInForm">
       <label for="signInForm" class="titleLabel">Sign In Form</label>
-      <form name="signInForm">
-        <input type="text" name="usernameS" placeholder="Username" /><br>
-        <input type="password" name="passwordS" placeholder="Password"/><br>
-        <input type="checkbox" name="rememberS" value=""/>
-        <label for="rememberS">Remember me</label>
-        <button type="submit" id="signInButton">Sign in</button>
-      </form>
+      <div id="internal">
+        <form name="signInForm">
+          <input type="text" name="usernameS" placeholder="Username" /><br>
+          <input type="password" name="passwordS" placeholder="Password"/><br>
+          <div class="checkboxDiv">
+            <input type="checkbox" name="rememberS" value=""/>
+            <label for="rememberS" class="checkboxLabel">Remember me</label>
+          </div>
+          <button type="submit" id="signInButton">Sign in</button>
+        </form>
+      </div>
     </div>
 
     <div id="recoverForm">
       <label for="recoverForm" class="titleLabel">Recover Form</label>
-      <form name="recoverForm" >
-        <input type="text" name="email" placeholder="Email"/><br>
-        <input type="text" name="phone" placeholder="Phone number"/><br>
-        <button type="submit" id="sendButton">Send</button>
-        <button type="submit" id="doneButton">Done</button>
-      </form>
+      <div id="internal">
+        <form name="recoverForm" >
+          <input type="text" name="email" placeholder="Email"/><br>
+          <input type="text" name="phone" placeholder="Phone number"/><br>
+          <button type="submit" id="sendButton">Send</button>
+          <button type="submit" id="doneButton">Done</button>
+        </form>
+      </div>
     </div>
 
     <div id="sendForm">
@@ -45,10 +56,12 @@
         <form name="sendForm" >
           <input type="text" name="usernameSe" placeholder="Your Name" /><br>
           <input type="text" name="emailSe" placeholder="Your Email"/><br>
-          <input type="text" name="messageSe" placeholder="Type your message here"/><br>
-          <input type="checkbox" name="forwardCheckboxSe" value=""/>
-          <label for="forwardCheckboxSe">Send a copy to my email.</label><br>
-          <button type="submit" id="sendEmailButtonSe">Send Email</button>
+          <input type="text" name="messageSe" id="textSe" placeholder="Type your message here"/><br>
+          <div class="checkboxDiv">
+            <input type="checkbox" name="forwardCheckboxSe" value=""/>
+            <label for="forwardCheckboxSe" class="checkboxLabel">Send a copy to my email.</label><br>
+          </div>
+          <button type="submit" class="longButton" id="sendEmailButtonSe">Send Email</button>
         </form>
       </div>
     </div>
