@@ -4,10 +4,10 @@
 }
 
 body {
-  background-image: url('img/tlo.png');
-  background-repeat: no-repeat;
+  background: url('img/tlo.png') no-repeat center center fixed;
   background-size: 100%;
   font-family: Biotif Medium;
+  color: #b5b5b5;
 }
 
 div {
@@ -24,82 +24,123 @@ form {
   width: 410pt;
 }
 
-input[type=text],[type=password] {
+input[type=text],[type=password], select, textarea, option {
   margin-top: 20pt;
   margin-left: 10pt;
   margin-right: 10pt;
   width: 325pt;
   height: 35pt;
-  font-size: 11pt;
+  font-size: 13pt;
   font-family: inherit;
   border-radius: 5pt;
-  padding-left: 35pt;
-  background-color: #f4f4f4;
-  background-position: 15px 15px;
-  background-repeat: no-repeat;
+  background: linear-gradient(#f6f6f6, #f0f0f0);
+  border: solid 1.5pt #d4d4d4;
 }
 
-input[type=checkbox] {
-  height: 20pt;
-  width: 20pt;
-  margin-left: 45pt;
-  margin-top: 15pt;
-  vertical-align: middle;
+::placeholder {
+  color: inherit;
+}
+
+input[type=text],[type=password], select {
+  padding-left: 60pt;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline-color: grey;
 }
 
 /*
-input[type=checkbox]:checked + label {
-    background: #26ca28;
+input[type=checkbox] {
+  height: 20pt;
+  width: 20pt;
+  margin-left: 85pt;
+  margin-top: 15pt;
+  vertical-align: middle;
 }
 */
+
+#checkboxBackground {
+  background: url("img/square.png") no-repeat;
+  width: 24.7pt;
+  height: 24.7pt;
+  margin-left: -30pt;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + div:before {
+  font-size: 15pt;
+  content: '\f0c8';
+  color: #88c813;
+  font-size-adjust: auto;
+  font-family: "FontAwesome";
+}
+
 
 .checkboxDiv {
   position: relative;
   text-align: left;
-  color: grey;
+  margin-top: 15pt;
+  display: inline-block;
+}
+
+.rememberMeDiv {
+  width: 205pt;
+  margin-left: -20pt;
 }
 
 .checkboxLabel {
-  display:inline-block;
-  vertical-align: bottom;
+  line-height: 25pt;
+  display: inline-block;
+  margin-left: 73pt;
   font-size: 15pt;
 }
 
-.emailInput {
-  background-image: url('img/envelope2.png');
+.pictureInput + .glyphicon {
+  position: absolute;
+  margin-top: 20pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  padding: 3pt 15pt 3pt 0;
+  left: 44pt;
+  top: 3pt;
+  color: #dedede;
+  font-size: 22pt;
+  border-right: solid 1.6pt;
 }
 
-.userInput {
-  background-image: url('img/user2.png');
+.inputGlyphicon {
+  position: relative;
 }
 
-.passwordInput {
-  background-image: url('img/lock2.png');
-}
-
-.locationInput {
-  background-image: url('img/pin2.png');
-}
-
-.phoneInput {
-  background-image: url('img/user2.png');
+textarea {
+  resize: none;
+  padding: 10px;
 }
 
 button {
   height: 33pt;
-  background-color: #93d02b;
-  border-color: #3f9c03;
+  background-image: linear-gradient(#a6d945, #7ec21f);
+  border: solid 1pt #3f9c03;
   border-radius: 2pt;
   color: white;
-  font-size: 12pt;
+  text-shadow: 0.5pt 0.5pt 0.5pt #000000;
+  font-size: 18pt;
   font-family: inherit;
   height: 45pt;
   width: 140pt;
   margin: 20pt;
 }
 
+button:disabled {
+  background: #bcdb97;
+  border-color: #a3d382;
+}
+
 #noButtonSu {
-  background-color: #f34254;
+  background-image: linear-gradient( #f76b7b, #f03747);
   border-color: #a82632;
 }
 
@@ -117,15 +158,25 @@ button {
 }
 
 img {
-  opacity: 0.5;
+  opacity: 0.3;
+  position: absolute;
+  cursor: pointer;
+}
+
+#logoTop{
   top: 55pt;
   left: 345pt;
-  position: absolute;
+  width: 410pt;
+}
+
+#logoBottom {
+  top: 1160pt;
+  left: 655pt;
+  height: 120pt;  
 }
 
 #textSe {
   height: 220pt;
-  /*align: top;*/
 }
 
 #registerForm {
@@ -135,13 +186,13 @@ img {
 }
 
 #signInForm{
-  left: 585pt;
+  left: 620pt;
   top: 190pt;
-  height: 270pt;
+  height: 240pt;
 }
 
 #recoverForm{
-  left: 585pt;
+  left: 620pt;
   top: 530pt;
   height: 240pt;
 }
@@ -153,7 +204,7 @@ img {
 }
 
 #subscribeForm {
-  left: 585pt;
+  left: 620pt;
   top: 875pt;
   height: 175pt;
 }

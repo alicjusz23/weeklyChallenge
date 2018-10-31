@@ -1,37 +1,79 @@
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <img src="logo.png" />
+    <div>
+      <img src="img/logo_top.png" id="logoTop"/>
+    </div>
 
     <div id="registerForm">
       <label for="registerForm" class="titleLabel">Register Form</label>
       <div id="internal">
-        <form name="registerForm">
-          <input type="text" name="usernameR" class="userInput" placeholder="Username" /><br>
-          <input type="password" name="password" class="passwordInput" placeholder="Password"/><br>
-          <input type="password" name="confPassword" class="passwordInput" placeholder="Confirm Password"/><br>
-          <input type="text" name="email" class="emailInput" placeholder="Email"/><br>
-          <input type="text" name="location" class="locationInput" placeholder="Location"/><br>
+        <form name="registerForm" method="post" onsubmit="return onRegister()">
+          <div class="inputGlyphicon">
+            <input type="text" id="usernameRg" class="pictureInput" placeholder="Username" />
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+          <div class="inputGlyphicon">
+              <input type="password" id="passwordRg" class="pictureInput" placeholder="Password"/>
+            <span class="glyphicon glyphicon-lock"></span>
+          </div>
+          <div class="inputGlyphicon">
+            <input type="password" id="confPasswordRg" class="pictureInput" placeholder="Confirm Password"/>
+            <span class="glyphicon glyphicon-lock"></span>
+          </div>
+          <div class="inputGlyphicon">
+            <input type="text" id="emailRg" class="pictureInput" placeholder="Email"/>
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+          <div class="inputGlyphicon">
+              <select name="location" id="locationRg" class="pictureInput">
+                <option>Your location</option>
+                <option>Warsaw</option>
+                <option>London</option>
+                <option>NYC</option>
+              </select>
+            <span class="glyphicon glyphicon-map-marker"></span>
+          </div>
           <div class="checkboxDiv">
-            <input type="checkbox" name="agreement" value="agreement"/>
-            <label class="checkboxLabel">I have read and accept the terms of use.</label><br>
+            <label class="checkboxLabel">
+              <input type="checkbox" id="agreementRg" value="true"/>
+              <div id="checkboxBackground"></div>
+              I have read and accept the terms of use.
+            </label>
           </div>
           <button type="submit" class="longButton" id="signUpButton">Sign up</button>
         </form>
       </div>
     </div>
 
-    <div id="signInForm">
+    <div id="signInForm" method="post" onsubmit="return onSignIn()">
       <label for="signInForm" class="titleLabel">Sign In Form</label>
       <div id="internal">
         <form name="signInForm">
-          <input type="text" name="usernameS" class="userInput" placeholder="Username" /><br>
-          <input type="password" class="passwordInput" name="passwordS" placeholder="Password"/><br>
-          <div class="checkboxDiv">
-            <input type="checkbox" name="rememberS" value=""/>
-            <label for="rememberS" class="checkboxLabel">Remember me</label>
+          <div class="inputGlyphicon">
+            <input type="text" id="usernameS" class="pictureInput" placeholder="Username" />
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+          <div class="inputGlyphicon">
+            <input type="password" id="passwordS" class="pictureInput" placeholder="Password"/>
+            <span class="glyphicon glyphicon-lock"></span>
+          </div>
+          <div class="checkboxDiv rememberMeDiv">
+            <label class="checkboxLabel">
+              <input type="checkbox" id="rememberS"/>
+              <div id="checkboxBackground"></div>
+              Remember me
+            </label>
           </div>
           <button type="submit" id="signInButton">Sign in</button>
         </form>
@@ -41,11 +83,17 @@
     <div id="recoverForm">
       <label for="recoverForm" class="titleLabel">Recover Form</label>
       <div id="internal">
-        <form name="recoverForm" >
-          <input type="text" name="email" class="emailInput" placeholder="Email"/><br>
-          <input type="text" name="phone" class="phoneInput" placeholder="Phone number"/><br>
-          <button type="submit" id="sendButton">Send</button>
-          <button type="submit" id="doneButton">Done</button>
+        <form name="recoverForm">
+          <div class="inputGlyphicon">
+            <input type="text" id="emailRc" class="pictureInput" placeholder="Email"/>
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+          <div class="inputGlyphicon">
+              <input type="text" id="phoneRc" class="pictureInput" placeholder="Phone number"/>
+            <span class="glyphicon glyphicon-phone"></span>
+          </div>
+          <button type="submit" id="sendButtonRc">Send</button>
+          <button type="button" id="doneButtonRc">Done</button>
         </form>
       </div>
     </div>
@@ -53,28 +101,44 @@
     <div id="sendForm">
       <label for="sendForm" class="titleLabel">Send Email</label>
       <div id="internal">
-        <form name="sendForm" >
-          <input type="text" name="usernameSe" class="userInput" placeholder="Your Name" /><br>
-          <input type="text" name="emailSe" class="emailInput" placeholder="Your Email"/><br>
-          <input type="text" name="messageSe" id="textSe" placeholder="Type your message here"/><br>
+        <form name="sendForm" method="post" onsubmit="return onSendEmail()">
+          <div class="inputGlyphicon">
+              <input type="text" id="usernameSe" class="pictureInput" placeholder="Your Name" />
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+          <div class="inputGlyphicon">
+            <input type="text" id="emailSe" class="pictureInput" placeholder="Your Email">
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+          <textarea cols=50 rows=50 form="sendForm" id="textSe" placeholder="Type your message..."></textarea><br>
           <div class="checkboxDiv">
-            <input type="checkbox" name="forwardCheckboxSe" value=""/>
-            <label for="forwardCheckboxSe" class="checkboxLabel">Send a copy to my email.</label><br>
+            <label class="checkboxLabel">
+              <input type="checkbox" id="forwardCheckboxSe" value=""/>
+              <div id="checkboxBackground"></div>
+              Send a copy to my email.
+              </label>
           </div>
           <button type="submit" class="longButton" id="sendEmailButtonSe">Send Email</button>
         </form>
       </div>
     </div>
 
-    <div id="subscribeForm">
+    <div id="subscribeForm" >
       <label for="subscribeForm" class="titleLabel">Subscribe Form</label>
       <div id="internal">
-        <form name="subscribeForm" >
-          <input type="text" name="emailSu" class="emailInput" placeholder="Email"/><br>
+        <form name="subscribeForm" method="post" onsubmit="return onSubscribe()">
+          <div class="inputGlyphicon">
+            <input type="text" id="emailSu" class="pictureInput" placeholder="Email"/>
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
           <button type="submit" id="subscribeButtonSu">Subscribe</button>
-          <button type="submit" id="noButtonSu">No, thanks</button>
+          <button type="button" id="noButtonSu">No, thanks</button>
         </form>
       </div>
+    </div>
+
+    <div >
+      <img src="img/logo_down2.png" id="logoBottom"/>
     </div>
 
   </body>
