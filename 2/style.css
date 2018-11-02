@@ -1,0 +1,33 @@
+section {
+  width: 100%;
+  min-height: 350px;
+  text-align: center;
+}
+
+#intro {
+  background: url("img/intro.png") 100%;
+}
+
+#about {
+  background-color: #00c4c4;
+}
+
+#services {
+  background-color: #70bfff;
+}
+
+#gallery {
+  background-color: #ffe92f;
+}
+
+#subscribe {
+  background: url("img/blueberries_big.png") 100%;
+}
+
+#blog {
+  background-color: #b07cf7;
+}
+
+#contact {
+  background: url("img/contact.png") 100%;
+}
